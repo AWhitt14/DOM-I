@@ -40,3 +40,67 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+
+/*------images------*/
+const ctaImg = document.getElementById("cta-img");
+ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
+
+const midImg = document.getElementById("middle-img");
+midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+/*------nav------*/
+let nava = document.querySelectorAll('nav > a');
+nava = Array.from(nava);
+
+  for (let i = 0; i < nava.length; i++){
+    nava[i].textContent = siteContent["nav"][`nav-item-${i + 1}`]
+  };
+/*------cta words------*/
+const h1Words = document.querySelector("h1");
+h1Words.textContent = siteContent["cta"]["h1"];
+const wordSpacing = "word-spacing";
+h1Words.style.wordSpacing = "9999rem";
+
+const b1 = document.querySelector("button");
+b1.textContent = siteContent["cta"]["button"];
+
+/*------middle------*/
+let midh4 = document.querySelectorAll(".text-content > h4");
+midh4 = Array.from(midh4);
+midh4[0].textContent = siteContent["main-content"]["features-h4"];
+midh4[1].textContent = siteContent["main-content"]['about-h4'];
+midh4[2].textContent = siteContent["main-content"]['services-h4'];
+midh4[3].textContent = siteContent["main-content"]['product-h4'];
+midh4[4].textContent = siteContent["main-content"]['vision-h4'];
+
+let midp = document.querySelectorAll(".text-content > p");
+midp = Array.from(midp);
+midp[0].textContent = siteContent["main-content"]["features-content"];
+midp[1].textContent = siteContent["main-content"]['about-content'];
+midp[2].textContent = siteContent["main-content"]['services-content'];
+midp[3].textContent = siteContent["main-content"]['product-content'];
+midp[4].textContent = siteContent["main-content"]['vision-content'];
+
+
+/*------contact------*/
+const contacth4 = document.querySelector('.contact > h4');
+contacth4.textContent = siteContent["contact"]["contact-h4"];
+let contactp = document.querySelectorAll('.contact > p');
+contactp = Array.from(contactp);
+contactp[0].textContent = siteContent["contact"]["address"];
+contactp[1].textContent = siteContent["contact"]["phone"];
+contactp[2].textContent = siteContent["contact"]["email"];
+
+/*------footer------*/
+const foot = document.querySelector("footer > p");
+foot.textContent = siteContent["footer"]["copyright"];
+
+
+/*------new content------*/
+const navBar = document.querySelector("nav");
+navBar.style.color = "green";
+const new1 = "Awesome";
+const new2 = 'possum';
+navBar.prepend(new1);
+navBar.append(new2);
