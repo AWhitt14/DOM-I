@@ -100,7 +100,12 @@ foot.textContent = siteContent["footer"]["copyright"];
 /*------new content------*/
 const navBar = document.querySelector("nav");
 navBar.style.color = "green";
-const new1 = "Awesome";
-const new2 = 'possum';
+const new1 = document.createElement('a');
+new1.textContent = "Awesome";
+new1.href = '#';
+const new2 = document.createElement('a');
+new2.textContent = 'possum';
+new2.href = '#';
 navBar.prepend(new1);
-navBar.append(new2);
+navBar.appendChild(new2);
+navBar.setAttribute = 'color';
