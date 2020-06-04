@@ -77,5 +77,16 @@ midp[3].textContent = siteContent["main-content"]['product-content'];
 midp[4].textContent = siteContent["main-content"]['vision-content'];
 
 
-/*------nav------*/
-//const navAnch = document.querySelectorAll('nav > a');
+/*------contact------*/
+const contacth4 = document.querySelector('.contact > h4');
+contacth4.textContent = siteContent["contact"]["contact-h4"];
+let contactp = document.querySelectorAll('.contact > p');
+contactp = Array.from(contactp);
+contactp[0].textContent = siteContent["contact"]["address"];
+contactp[1].textContent = siteContent["contact"]["phone"];
+contactp[2].textContent = siteContent["contact"]["email"];
+
+/*------footer------*/
+const foot = document.querySelector("footer > p");
+foot.textContent = siteContent["footer"]["copyright"];
+
