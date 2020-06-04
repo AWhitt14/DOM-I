@@ -59,7 +59,22 @@ h1Words.style.wordSpacing = "9999rem";
 const b1 = document.querySelector("button");
 b1.textContent = siteContent["cta"]["button"];
 
+/*------middle------*/
+let midh4 = document.querySelectorAll(".text-content > h4");
+midh4 = Array.from(midh4);
+midh4[0].textContent = siteContent["main-content"]["features-h4"];
+midh4[1].textContent = siteContent["main-content"]['about-h4'];
+midh4[2].textContent = siteContent["main-content"]['services-h4'];
+midh4[3].textContent = siteContent["main-content"]['product-h4'];
+midh4[4].textContent = siteContent["main-content"]['vision-h4'];
 
+let midp = document.querySelectorAll(".text-content > p");
+midp = Array.from(midp);
+midp[0].textContent = siteContent["main-content"]["features-content"];
+midp[1].textContent = siteContent["main-content"]['about-content'];
+midp[2].textContent = siteContent["main-content"]['services-content'];
+midp[3].textContent = siteContent["main-content"]['product-content'];
+midp[4].textContent = siteContent["main-content"]['vision-content'];
 
 
 /*------nav------*/
