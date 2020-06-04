@@ -49,7 +49,13 @@ ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 const midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
 
+/*------nav------*/
+let nav = document.querySelectorAll('nav > a');
+nav = Array.from(nav);
 
+  for (let i = 0; i < nav.length; i++){
+    nav[i].textContent = siteContent["nav"][`nav-item-${i + 1}`]
+  };
 /*------cta words------*/
 const h1Words = document.querySelector("h1");
 h1Words.textContent = siteContent["cta"]["h1"];
@@ -90,3 +96,8 @@ contactp[2].textContent = siteContent["contact"]["email"];
 const foot = document.querySelector("footer > p");
 foot.textContent = siteContent["footer"]["copyright"];
 
+
+
+
+let navAnch = document.querySelectorAll('nav > a');
+navAnch = Array.from(navAnch);
