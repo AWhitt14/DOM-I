@@ -41,8 +41,26 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
-let ctaImg = document.getElementById("cta-img");
+
+/*------images------*/
+const ctaImg = document.getElementById("cta-img");
 ctaImg.setAttribute('src', siteContent["cta"]["img-src"])
 
-let midImg = document.getElementById("middle-img");
+const midImg = document.getElementById("middle-img");
 midImg.setAttribute('src', siteContent["main-content"]["middle-img-src"]);
+
+
+/*------cta words------*/
+const h1Words = document.querySelector("h1");
+h1Words.textContent = siteContent["cta"]["h1"];
+const wordSpacing = "word-spacing";
+h1Words.style.wordSpacing = "9999rem";
+
+const b1 = document.querySelector("button");
+b1.textContent = siteContent["cta"]["button"];
+
+
+
+
+/*------nav------*/
+//const navAnch = document.querySelectorAll('nav > a');
