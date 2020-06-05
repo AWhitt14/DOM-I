@@ -108,4 +108,9 @@ new2.textContent = 'possum';
 new2.href = '#';
 navBar.prepend(new1);
 navBar.appendChild(new2);
-navBar.setAttribute = 'color';
+
+let nava2 = document.querySelectorAll('header > nav > a');
+nava2 = Array.from(nava2);
+for (let i = 0; i < nava2.length; i++){
+  nava2[i].style.color = 'green';
+};
